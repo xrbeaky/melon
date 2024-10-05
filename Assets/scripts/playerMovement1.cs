@@ -23,6 +23,6 @@ public class playerMovement : MonoBehaviour
         velocity = new Vector3(Input.GetAxisRaw("Horizontal") * fixedStrafeSpeed, 0, fixedForwardSpeed);
         transform.Translate(velocity * Time.deltaTime);
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, sideLimit * -1f, sideLimit), transform.position.y, transform.position.z);
+        transform.localPosition = new Vector3(Mathf.Clamp(transform.position.x, sideLimit * -1f, sideLimit), transform.position.y, transform.position.z);
     }
 }

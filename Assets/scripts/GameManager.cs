@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [HideInInspector] public static GameManager instance;
-    [SerializeField] PlayerAttack playerAttack;
+    [SerializeField] PlayerShoot playerAttack;
 
     public float respawnDelay = 5f;
 

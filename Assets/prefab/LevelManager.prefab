@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8642516339267301801}
-  - component: {fileID: 8661161594238673804}
+  - component: {fileID: 4695838059689761730}
   m_Layer: 0
-  m_Name: EnvironmentManager
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ Transform:
   - {fileID: 6071701219883200236}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8661161594238673804
+--- !u!114 &4695838059689761730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,13 +65,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2534010160628693700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d735ef2c3ed35df44896675070013604, type: 3}
+  m_Script: {fileID: 11500000, guid: 300d5b86ce72c934282f7fdd2ada466b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocks: []
-  blockPrefab: {fileID: 7265050526150147353, guid: d95a1aaf31a4d3f4aa2120668560fcc4, type: 3}
-  blockSpacing: 25
+  enemies: {fileID: 0}
+  standardBlockPrefab: {fileID: 7265050526150147353, guid: d95a1aaf31a4d3f4aa2120668560fcc4, type: 3}
+  blockSet:
+  - prefab: {fileID: 7265050526150147353, guid: d95a1aaf31a4d3f4aa2120668560fcc4, type: 3}
+    frequency: 1
+  - prefab: {fileID: 489779759003363049, guid: e82c1ba4caf2b2f42881e903c771d333, type: 3}
+    frequency: 0.05
+  - prefab: {fileID: 785979399341991579, guid: ed9879db9346f2c4b88673e8caa554e4, type: 3}
+    frequency: 0.1
   renderDistance: 20
+  blockSpacing: 25
 --- !u!1001 &175320227257531430
 PrefabInstance:
   m_ObjectHideFlags: 0

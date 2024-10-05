@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerShoot : MonoBehaviour
 {
     bool canShoot = true;
     [SerializeField] float bulletDamage;
@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
             }
         }
 
-        var bul = Instantiate(bullet, firePoint.position, Quaternion.identity).GetComponent<Bullet>();
+        var bul = Instantiate(bullet, firePoint.position, Quaternion.identity, transform.parent).GetComponent<Bullet>();
         bul.SetBullet(bulletDamage, bulletSpeed);
         canShoot = false;
         shootTimer = shootDelay;

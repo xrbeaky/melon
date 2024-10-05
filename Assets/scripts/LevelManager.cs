@@ -4,16 +4,17 @@ using System.ComponentModel;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
 
-public class EnvironmentManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     [SerializeField] EnemyManager enemies;
-    [SerializeField] List<Transform> blocks = new List<Transform>();
 
-    [SerializeField] Transform blockPrefab;
+    [SerializeField] Transform standardBlockPrefab;
+    [SerializeField] Block[] blockSet;
+    [SerializeField] float renderDistance = 10f;
     [SerializeField] float blockSpacing = 1.0f;
     private Transform furthestBlock;
-    [SerializeField] float renderDistance = 10f;
-
+    List<Transform> blocks = new List<Transform>();
+    
     private void Start()
     {
         InitializeBlocks();
@@ -23,7 +24,7 @@ public class EnvironmentManager : MonoBehaviour
     {
         if((furthestBlock.position.z - playerMovement.playerPosition.z) < renderDistance * 30)
         {
-            Transform b = Instantiate(blockPrefab, new Vector3(furthestBlock.position.x, furthestBlock.position.y, furthestBlock.position.z + blockSpacing), Quaternion.identity);
+            Transform b = Instantiate(RandomBlock().prefab, new Vector3(furthestBlock.position.x, furthestBlock.position.y, furthestBlock.position.z + blockSpacing), Quaternion.Euler(0f, 0f, transform.parent.rotation.z), transform);
             blocks.Add(b);
             furthestBlock = b;
         }
@@ -57,5 +58,26 @@ public class EnvironmentManager : MonoBehaviour
             blocks[minIndex] = temp;  
         }
         furthestBlock = blocks[blocks.Count - 1];
+    }
+
+    Block RandomBlock()
+    {
+        float totalWeight = 0f;
+        foreach (Block block in blockSet)
+        {
+            totalWeight += block.frequency;
+        }
+        float randomValue = Random.Range(0, totalWeight);
+
+        foreach (Block block in blockSet)
+        {
+            if (randomValue < block.frequency) { 
+                return block;
+            }
+
+            randomValue -= block.frequency;
+        }
+
+        return blockSet[0];
     }
 }
