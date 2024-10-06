@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] public float damage = 51f;
     [SerializeField] float speed = 200f;
     [SerializeField] float lifeTime;
+    [SerializeField] GameObject bulletHitFX;
     Vector3 velocity = Vector3.forward;
 
     private void Start()
@@ -39,8 +40,14 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            Instantiate(bulletHitFX, transform.position, Quaternion.identity);
             other.GetComponent<Health>().DealDamage(damage);
             Destroy(gameObject);
         }
+        else if (other.CompareTag("Environment"))
+        {
+            Instantiate(bulletHitFX, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }    
     }
 }
