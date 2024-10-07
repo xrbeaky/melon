@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public static GameManager instance;
     [SerializeField] PlayerShoot playerAttack;
 
+    public int civiliansSaved = 0;
     public float respawnDelay = 5f;
 
     private void Awake()
@@ -31,5 +32,10 @@ public class GameManager : MonoBehaviour
     public void RespawnPlayer ()
     {
         playerAttack.onPlayerRespawn();
+    }
+
+    public void SaveCivilian()
+    {
+        civiliansSaved++;
     }
 }

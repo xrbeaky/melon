@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4710664349334447896}
   - component: {fileID: 8501536853463578958}
   - component: {fileID: 2428042818363110821}
+  - component: {fileID: 8934179472045695220}
   m_Layer: 3
   m_Name: VirtualCam
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1912966250380418593}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10904041, y: -0, z: -0, w: 0.99403733}
-  m_LocalPosition: {x: 0, y: 11.4, z: -17.5}
+  m_LocalPosition: {x: 0, y: 11.4, z: -21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137,6 +138,20 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &8934179472045695220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912966250380418593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb55a5555d9a934896578db0ec79ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  offset: {x: 0, y: 0, z: -21}
 --- !u!1 &2050428371790183143
 GameObject:
   m_ObjectHideFlags: 0

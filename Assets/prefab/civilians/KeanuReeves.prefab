@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4760379324769409158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3218853833029319514, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d579486c605b85c43900affff13d3f7e, type: 3}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873313540667331133, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478889109668259048, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: m_Name
+      value: KeanuReeves
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887129466553573396, guid: 074fc24016e3e28419670316b914346c, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d579486c605b85c43900affff13d3f7e, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 074fc24016e3e28419670316b914346c, type: 3}

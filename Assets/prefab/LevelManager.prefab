@@ -76,8 +76,8 @@ MonoBehaviour:
   - prefab: {fileID: 489779759003363049, guid: e82c1ba4caf2b2f42881e903c771d333, type: 3}
     frequency: 0.05
   - prefab: {fileID: 785979399341991579, guid: ed9879db9346f2c4b88673e8caa554e4, type: 3}
-    frequency: 0.1
-  renderDistance: 20
+    frequency: 0.005
+  renderDistance: 40
   blockSpacing: 25
 --- !u!1001 &175320227257531430
 PrefabInstance:
