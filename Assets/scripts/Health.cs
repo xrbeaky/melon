@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem deathVFX;
     [SerializeField] GameObject gfx;
     [SerializeField] float deathVFXDelay;
-    
+
     float health;
 
     private void Start()
@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
 
     public void Heal(float _health)
     {
-        if(health < 0 && health + _health > 0)
+        if (health < 0 && health + _health > 0)
         {
             Respawn();
         }
@@ -39,12 +39,28 @@ public class Health : MonoBehaviour
     {
         health = maxHealth;
         gfx.SetActive(true);
+
+        switch (type)
+        {
+            case EntityType.Player:
+                GetComponent<Collider>().enabled = true;
+                break;
+            case EntityType.Enemy:
+                GetComponent<Collider>().enabled = true;
+                break;
+            case EntityType.Destructible:
+
+                break;
+            case EntityType.Other:
+
+                break;
+        }
     }
 
     public void DealDamage(float _damage)
     {
         health -= _damage;
-        if(health < 0)
+        if (health < 0)
         {
             Death();
         }
@@ -73,7 +89,7 @@ public class Health : MonoBehaviour
                 Invoke("Kill", deathVFXDelay);
                 break;
         }
-        
+
     }
 
     void Kill()

@@ -15,7 +15,9 @@ public class Pickup : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            Debug.Log("player interact");
             GameManager.instance.SaveCivilian();
+            Destroy(gameObject);
         }
     }
 }

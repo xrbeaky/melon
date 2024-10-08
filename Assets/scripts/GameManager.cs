@@ -37,5 +37,6 @@ public class GameManager : MonoBehaviour
     public void SaveCivilian()
     {
         civiliansSaved++;
+        UIManager.instance.UpdatePlayerScore();
     }
 }
